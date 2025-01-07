@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Soumettre un Commentaire</h1>
-    <form action="submit_feedback.php" method="POST">
+    <form method="POST">
         <label for="name">Nom :</label>
         <input type="text" name="name" id="name" required><br><br>
 
