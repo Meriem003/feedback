@@ -6,5 +6,6 @@
         echo "<td>{$row['nom']}</td>";
         echo "<td>{$row['message']}</td>";
         echo "<tr>";
+        // echo
     }
 ?>
