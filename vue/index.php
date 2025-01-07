@@ -21,6 +21,7 @@
     <tr>
       <th>nom</th>
       <th>message</th>
+      <th>horodatage</th>
     </tr>
   </thead>
   <tbody>

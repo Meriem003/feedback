@@ -1,9 +1,8 @@
 <?php
 class feedback {
-    public $id;
     public $nom;
     public $message;
-    public $pdo;
+    private $pdo;
 
     public function __construct($nom, $message, $pdo) {
         $this->nom = $nom;

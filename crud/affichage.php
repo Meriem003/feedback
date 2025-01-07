@@ -5,7 +5,7 @@
         echo "<tr>";
         echo "<td>{$row['nom']}</td>";
         echo "<td>{$row['message']}</td>";
+        echo "<td>{$row['horodatage']}</td>";       
         echo "<tr>";
-        // echo
     }
 ?>
