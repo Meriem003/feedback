@@ -1,6 +1,4 @@
 <?php
-include '../model/conn.php';
-
 class feedback {
     public $id;
     public $nom;
@@ -12,11 +10,20 @@ class feedback {
         $this->message = $message;
         $this->pdo = $pdo;
     }
-
     public function add() {
         $sql = "INSERT INTO commentaires (nom, message) VALUES (?, ?)";
         $stmt = $this->pdo->prepare($sql);
-        $stmt->execute([$this->nom, $this->message ]);
+        $stmt->execute([$this->nom, $this->message]);
     }
-}
+    public function affichage(){
+        $sql = "SELECT * FROM commentaires";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute();
+        $messages = [];
+        while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+            $messages[] = $row;
+        }
+        return $messages;
+        }
+    }
 ?>

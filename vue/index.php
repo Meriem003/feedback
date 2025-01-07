@@ -16,17 +16,21 @@
 
         <input type="submit" name="envoyer" value="Envoyer le commentaire">
     </form>
-    <?php
+    <table>
+  <thead>
+    <tr>
+      <th>nom</th>
+      <th>message</th>
+    </tr>
+  </thead>
+  <tbody>
+<?php
     include'../model/conn.php';
     include'../class/classFeedback.php';
-    if (isset($_POST["envoyer"])) {
-        
-        $nom = $_POST["nom"];
-        $message = $_POST["message"];
-
-        $commentaires = new feedback($nom, $message,  $pdo);
-        $commentaires->add();
-    }
-    ?>
+    include'../crud/affichage.php';
+    include'../crud/add.php';
+?>
+</tbody>
+</table>
 </body>
 </html>
